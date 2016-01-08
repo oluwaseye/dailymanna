@@ -1,225 +1,303 @@
-@charset "utf-8";
+/* Empty. Add your own CSS if you like */
+/* Utilities */
 
-/* CSS Document */
-/*
-Copyright (c) 2010, Yahoo! Inc. All rights reserved.
-Code licensed under the BSD License:
-http://developer.yahoo.com/yui/license.html
-version: 3.3.0
-build: 3167
-*/
-html {
-    color:#000;
-    background:#f5f5f5;
-    font-family:'Roboto',sans-serif;
-    color:#333
+.link {
+    color: #116262;
+    font-weight: bold;
+}
+h3{
+    font-size:20px;
 }
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
-    margin:0;
-    padding:0
+h4 {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 16px;
 }
 
-table {
-    border-collapse:collapse;
-    border-spacing:0
+h4:first-child {
+    border-top: none;
+    padding-top: initial;
 }
 
-fieldset,img {
-    border:0
-}
-
-address,caption,cite,code,dfn,em,strong,th,var {
-    font-style:normal;
-    font-weight:400
-}
-
-li {
-    list-style:none
-}
-
-caption,th {
-    text-align:left
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-size:100%;
-    font-weight:400
-}
-
-q:before,q:after {
-    content:''
-}
-
-abbr,acronym {
-    border:0;
-    font-variant:normal
-}
-
-sup {
-    vertical-align:text-top
-}
-
-sub {
-    vertical-align:text-bottom
-}
-
-input,textarea,select {
-    font-family:inherit;
-    font-size:inherit;
-    font-weight:inherit
-}
-
-input,textarea,select {
-    *font-size:100%
-}
-
-legend {
-    color:#000
-}
-
-* {
-    box-sizing:border-box;
-    moz-box-sizing:border-box
-}
-
-.clear {
-    display:block;
-    clear:both
-}
-
-#header {
-    width:100%;
-    height:64px;
-    box-shadow:0 2px 2px rgba(0,0,0,.2);
-    background:#fff
-}
-
-#box {
-    width:500px;
-    height:374px;
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-250px;
-    margin-top:-180px
-}
-
-#header ul li {
-    float:left
-}
-
-#header ul {
-    float:right;
-    margin-top:20px
-}
-
-#header ul li a {
-    font-size:12px;
-    color:#333;
-    padding:20px;
-    text-decoration:none
-}
-
-#header ul li a:hover {
-    color:#3b78e7
-}
-
-#buttons {
-    width:350px;
-    margin:0 auto;
-    margin-bottom:120px;
-    margin-top:40px
-}
-
-#buttons li {
-    float:left;
-    margin-left:10px;
-    margin-right:10px
-}
-
-#buttons li a {
-    width:150px;
-    display:block;
-    height:40px;
-    line-height:2.333;
-    border:2px solid #3b78e7;
-    font-weight:700;
-    color:#3b78e7;
-    border-radius:3px;
-    text-align:center;
-    text-decoration:none
-}
-
-#buttons li a:hover {
-    border:2px solid #da4733;
-    color:#da4733
-}
-
-img {
-    max-width:100px;
-    display:block;
-    margin:0 auto;
-    margin-bottom:20px
-}
-
-h1 {
-    font-size:36px;
-    font-weight:300;
-    text-align:center;
-    margin-bottom:20px
-}
-
-h2 {
-    font-size:25px;
-    font-weight:300;
-    text-align:center;
-    margin-bottom:20px
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
 }
 
 p {
-    text-align:center;
-    margin-bottom:20px;
-    line-height:1.5
+    color: #555;
+    margin: 0 0 25px;
 }
 
-p a {
-    color:#3b78e7;
-    text-decoration:none
+.no-border {
+    border: none;
 }
 
-p a:hover {
-    color:#da4733
+.static {
+    position: static;
 }
 
-@media only screen and (max-width : 400px) {
-#box {
-    position:static;
-    margin-left:0;
-    margin-top:20px;
-    width:100%;
-    padding:20px
+.bold {
+    font-weight: bold;
 }
 
-h1 {
-    font-size:18px
+.border-top {
+    border-top: solid 1px #ccc;
+    padding-top: 30px;
 }
 
-p {
-    font-size:12px
+.blue-grey-900 {
+    background-color: #263238 !important;
+    color: #fff;
+}
+/* Menu */
+
+.menu .bar.bar-header.expanded {
+    background-image: url('../img/Green Landscape3.jpg');
+    background-size: 120%;
+    background-position: 0%;
+    transition: all .5s ease-in-out;
 }
 
-#buttons li {
-    float:none;
-    margin-bottom:20px
+.menu.menu-left * {
+    font-weight: bold;
 }
 
-#buttons {
-    width:100%;
-    margin-bottom:0
+.item-radio input:checked ~ .item-content {
+    background: transparent;
 }
 
-#buttons li a {
-    width:100%
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+.item.item-radio .radio-icon {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.item.item-radio:active .radio-icon {
+    opacity: 0;
+    transform: scale(1.6);
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.directions.button-bar {
+    margin: 0 auto;
+    width: 33.333%;
+}
+
+.directions.button-bar button {
+    line-height: 26px;
+}
+
+.ion-arrow-right-c.top-left:before {
+    transform: rotate(-135deg);
+}
+
+.ion-arrow-right-c.top-right:before {
+    transform: rotate(-45deg);
+}
+
+.ion-arrow-right-c.bottom-left:before {
+    transform: rotate(-225deg);
+}
+
+.ion-arrow-right-c.bottom-right:before {
+    transform: rotate(45deg);
+}
+
+#modal {
+    background-color: #ef4e3a;
+    border-radius: 100%;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    height: 50%;
+    bottom: 0;
+    opacity: 0;
+    width: 700px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.expand #modal {
+    background-color: #DBDBDB;
+    border-radius: 0;
+    border-top: solid 4px #ef4e3a;
+    opacity: 1;
+    z-index: 9;
+}
+/* CODE */
+
+.code {
+    color: #333;
+    font-family: monospace;
+    padding: 10px;
+    white-space: pre;
+}
+
+.code-wrapper {
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.code-wrapper::before {
+    color: #1B5E20;
+    font-family: "Ionicons";
+    speak: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: '\f216 ';
+}
+
+.code-wrapper.active::before {
+    content: '\f207 ';
+}
+
+.code-wrapper .toggle {
+    color: #4CAF50;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 8px;
+    text-decoration: underline;
+}
+
+.code-wrapper .code {
+    opacity: 0;
+    margin-top: -20px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: 0.1s all ease-in-out;
+    z-index: 9999999999;
+}
+
+.code-wrapper.code-wrapper-last .code {
+    position: relative;
+}
+
+.code-wrapper.active .code {
+    background: #f9f9f9;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    left: 16px;
+    height: initial;
+    margin-top: 15px;
+    padding: 15px;
+    right: 16px;
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    width: initial;
+}
+
+.popover {
+    left: initial !important;
+    right: 16px !important;
+    top: 16px !important;
+}
+.platform-android .popover{
+margin-top:10px;
+}
+
+/*seyz*/
+#fab{
+    display: none;
+}
+
+.stable-bg, .stable-bg.activated, .stable-bg:active, .stable-bg:hover, .stable-border, .stable-border.activated, .stable-border:active, .stable-border:hover{
+    background: #fafafa;
+}
+.has-expanded-header{
+    top:88px!important;
+}
+#countdown-clock{
+    font-size:18px;
+}
+#settingh3{
+    font-size: 18px;
+    color:#444;
+}
+#settingsmall{
+    font-size: 14px;
+    color:#444;
+}
+.spinner svg {
+  width: 28px;
+  height: 28px;
+  stroke: #444;
+  fill: #444;
+}
+
+.droid-spinner{
+    float: right;
+    padding: 5px 20px 0px 0px;
+}
+
+.verse{
+    font-size: 18px;
+    font-weight: 700;
+}
+.reference{
+    font-size: 16px;
+    float: right;
+    font-style: italic;
+}
+
+._reference{
+     text-align: right;
+    font-size: 32px;
+}
+
+#resourceimg{
+width:140px;
+float:right;
+}
+
+#linkedin{
+width:140px;
+
+}
+
+.attribution p{
+    font-size: 16px;
+    text-align: center;
+    
+}
+.attribution img{
+    width:140px;
+}
+.message{
+    font-size: 18px;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+.date{
+    font-size: 14px;
+    float: right;
+    font-style: italic;
+}
+.offline h1{
+    color: #444;
+    text-align: center;
+}
+.offline p{
+    font-size: 20px;
+    text-align: center;
+    font-style: bold;
 }

@@ -1,0 +1,40 @@
+<ion-view view-title="DAILYMANNA">
+    
+     <ion-content>
+        
+        <div class="bar bar-subheader bar-stable static text-center">
+            <strong class="title">Verse of the day <i class="ion-ios-book"></i></strong><span class="droid-spinner" ng-show="dataLoading"><ion-spinner icon="android"></ion-spinner></span>
+            
+        </div>
+         <!--  online view -->
+        <div class="im-wrapper list card" ng-show="isOnline">
+        <div class="">
+            <p class="verse"> {{verse}}</p>
+            <p class="reference"> <strong><i class="ion-ios-book"></i> </strong>  {{reference}}</p>
+            
+            <p ng-bind-html="message | renderHTMLCorrectly"></p>
+<br/><br/><br/>
+            <p class="date"><i class="ion-calendar"></i> <span ng-bind="today | date:'MMM dd, yyyy'">{{today}}</span> </p>
+        </div>
+        
+         <button ng-disabled="dataLoading" ng-click="socialized()" class="button button-block button-dark ink icon-right ion-share">
+                    Share this verse
+                </button>
+            
+    
+          
+         </div>
+         
+         <!-- offline view -->
+         <div class="im-wrapper list card" ng-show="! isOnline">
+             <div class="offline"><br/>
+             <h1><i class="ion-alert-circled"></i></h1>
+             <p><br>You are currently offline. <br><br>Please turn on your <br/><br/> Mobile Data <i class="ion-connection-bars"></i> or <br/> connect to WIFI <i class="ion-wifi"></i><br/><br/><br/></p> 
+         </div>
+         </div>
+    </ion-content>
+    
+    
+    
+</ion-view>
+<!--<div onload="notificationManager()"></div>-->

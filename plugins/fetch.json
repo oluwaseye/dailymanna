@@ -1,24 +1,34 @@
 {
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-device": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-whitelist@1"
+            "id": "cordova-plugin-device"
         },
         "is_top_level": true,
         "variables": {}
     },
-    "nl.x-services.plugins.socialsharing": {
+    "cordova-plugin-app-event": {
         "source": {
             "type": "registry",
-            "id": "nl.x-services.plugins.socialsharing"
+            "id": "cordova-plugin-app-event"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-x-toast": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "org.apache.cordova.network-information": {
+    "de.appplant.cordova.plugin.local-notification": {
         "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.network-information"
+            "type": "git",
+            "url": "https://github.com/katzer/cordova-plugin-local-notifications.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
@@ -31,29 +41,22 @@
         "is_top_level": true,
         "variables": {}
     },
-    "de.appplant.cordova.plugin.local-notification": {
+    "cordova-plugin-x-socialsharing": {
         "source": {
             "type": "git",
-            "url": "https://github.com/katzer/cordova-plugin-local-notifications",
+            "url": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
             "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-device": {
+    "cordova-plugin-whitelist": {
         "source": {
-            "type": "registry",
-            "id": "cordova-plugin-device"
+            "type": "git",
+            "url": "https://github.com/apache/cordova-plugin-whitelist.git",
+            "subdir": "."
         },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "cordova-plugin-android-support-v4": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-android-support-v4"
-        },
-        "is_top_level": false,
+        "is_top_level": true,
         "variables": {}
     }
 }

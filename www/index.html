@@ -1,92 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font.css" type="text/css" charset="utf-8" />
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-      <link href="css/loader.css" rel="stylesheet">
-      <script type="text/javascript" src="cordova.js"></script>
- <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top  effect1" role="navigation" >
-      <div class="container">
-        <div id="navbar" class="">     
-            <div class="row nav-items">
-    	<div class="col-xs-8"><img src="images/daily.png"/></div>
-    	<div class="col-xs-3"><a href="" onclick="reload()" class="refresh pull-right" id="refresh"><i class="fa fa-circle-o-notch fa-spin fa-2x reload"></i></a></div>
-    	</div>
-          
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-<div id="sb-site">
-   <!-- opened a new container so the image can fit -->
-<div class="container">
-<div class ="row">
-<div class="col-xs-12">
-<div id="ourmanna-verse" class="well message-box"> 
+<!--<meta http-equiv="Content-Security-Policy" content="default-src *;
+ style-src 'self' 'unsafe-inline' http://fonts.googleapis.com/;
+script-src 'self' 'unsafe-inline' 'unsafe-eval' http://*.googleapis.com
+ http://maps.gstatic.com;">-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+   
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular/angular-resource.min.js"></script>
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+    
+    <!-- other js -->
+       <script type="text/javascript" src="lib/date/date.js"></script>
+    
+    <script type="text/javascript" src="lib/angular-timer/angular-timer.min.js"></script>
+    
+    <script type="text/javascript" src="lib/momentjs/moment.min.js"></script>
+    <script type="text/javascript" src="lib/momentjs/moment-timezone-with-data.js"></script>
+    <script type="text/javascript" src="lib/momentjs/min/locales.min.js"></script>
+    <script type="text/javascript" src="lib/humanize-duration/humanize-duration.js"></script>
+    
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/AppCtrl.js"></script>
+    <script src="js/controllers/DaileCtrl.js"></script>
+    <script src="js/controllers/PrayerFeedCtrl.js"></script>
+    <script src="js/controllers/SettingsCtrl.js"></script>
+    <script src="js/controllers/AboutCtrl.js"></script>
+     
+   
     
     
     
-    </div>
+  
     
-      
-    <a class="btn btn-block btn-info disabled" id="share-button"  onclick="window.plugins.socialsharing.share(reading, null, null, 'https://goo.gl/7v7Q8w')"><h4>Share this Verse <i class="fa fa-share"></i></h4></a>
-    <br/>
-    </div>
-    </div>         
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="well">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <p class="terms"><em>This app makes use of an open resource from <strong>OurManna.com</strong> and does not intend to sell or use the data for any financial purpose.</em>
-                        </p> 
-                        <p style="float:right;font-weight:bold;">Resource From:<br/><a href="http://ourmanna.com" target="_blank"><img src="ourmanna.png" id="resourceimg" class="img-responsive"/></a></p>
-                        <p ><br/><a href="https://www.linkedin.com/in/oluwaseye" target="_blank"><img src="images/myprofile.png" id="profimg" class="img-responsive"/></a></p>
-                        
-                    </div>
-                   
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
-    
-    
-</div>
-      
-         <!-- schedule -->
-          
-            <div class="container">
-                <a class="btn btn-info" onclick="scheduleDelayed()">In 5 sec<br /><span>schedule(1, firstAt:later)</span></a>
-                <a class="btn btn-primary" onclick="scheduleMinutely()">Every min<br /><span>schedule(1, every:minute)</span></a>
-            </div>
-      
-    </div><!-- /.container -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script> 
-
-        <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/database.js"></script>
-    <script type="text/javascript" src="js/notification.js"></script>
-  </body>
+   
+</head>
+<body ng-app="starter" class=“ng-cloak”>
+    <!--<ion-pane>
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Ionic Blank Starter</h1>
+        </ion-header-bar>
+        <ion-content>
+        </ion-content>
+    </ion-pane>-->
+    <ion-nav-view></ion-nav-view>
+    <div id="modal" class=""></div>
+</body>
 </html>
